@@ -1,14 +1,53 @@
+<title>Games | Gizmo</title>
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <div id="particlebox"></div>
 <script src="/scripts/bg.js"></script>
 
-<h1 id="title1" class="title1">games</h1> 
+<h1 id="title1" class="title1">Gizmo Games</h1>
 
-<div id="black" class="black"></div> <img src="/img/loading.gif" id="loadimg" class="loadimg"/> <style> @keyframes fadeout{ 0%{ opacity:1; pointer-events: none;} 100%{ opacity:0; display:none; }} .black{ position:absolute; left:0px; opacity:1; display:block; top:0px; width:100%; z-index:999999999999999999999999999999999999999999999; height:100%; } .loadimg{ position:absolute; opacity:1; display:block; width:125px; z-index:9999999999999999999999999999999999999999999999; height:125px; top:50%; left:50%; transform:translate(-50%, -50%); } </style> <script> function fade(){ document.getElementById("loadimg").style.animation="linear 1.5s 1 running fadeout"; document.getElementById("loadimg").addEventListener("animationend", () => { document.getElementById("black").style.animation="linear 1.5s 1 running fadeout"; document.getElementById("black").addEventListener("animationend", () => { document.getElementById("black").remove(); }); document.getElementById("loadimg").remove(); }); } setTimeout(fade,1200); </script> 
+<div id="black" class="black"></div> <img src="/img/loading.gif" id="loadimg" class="loadimg" />
+<style>
+  @keyframes fadeout {
+    0% {
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  .black {
+    position: absolute;
+    left: 0px;
+    opacity: 1;
+    display: block;
+    top: 0px;
+    width: 100%;
+    z-index: 999999999999999999999999999999999999999999999;
+    height: 100%;
+  }
+
+  .loadimg {
+    position: absolute;
+    opacity: 1;
+    display: block;
+    width: 125px;
+    z-index: 9999999999999999999999999999999999999999999999;
+    height: 125px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+<script> function fade() { document.getElementById("loadimg").style.animation = "linear 1.5s 1 running fadeout"; document.getElementById("loadimg").addEventListener("animationend", () => { document.getElementById("black").style.animation = "linear 1.5s 1 running fadeout"; document.getElementById("black").addEventListener("animationend", () => { document.getElementById("black").remove(); }); document.getElementById("loadimg").remove(); }); } setTimeout(fade, 1200); </script>
 <input type="text" placeholder="Search..." id="searchbar">
-<div class="buttons" align="center" id="buttons"> 
+<div class="buttons" align="center" id="buttons">
   <button class="games" data-sort="" onclick="paperio();">Paper.io</button>
   <button class="games" data-sort="" onclick="far();">Forward Assault Remix</button>
   <button class="games" data-sort="" onclick="run3();">Run 3</button>
@@ -20,10 +59,10 @@
   <button class="games" data-sort="" onclick="helixjump();">Helix Jump</button>
   <button class="games" data-sort="" onclick="amongus();">Among Us</button>
   <button class="games" data-sort="" onclick="rl();">Rocket League</button>
-  <button class="games" data-sort="" onclick="vex6();">Vex 6</button>  
-  <button class="games" data-sort="" onclick="vex5();">Vex 5</button>  
-  <button class="games" data-sort="" onclick="retrobowl();">Retro Bowl</button>  
-  <button class="games" data-sort="" onclick="bbs();">Basketball Stars</button>  
+  <button class="games" data-sort="" onclick="vex6();">Vex 6</button>
+  <button class="games" data-sort="" onclick="vex5();">Vex 5</button>
+  <button class="games" data-sort="" onclick="retrobowl();">Retro Bowl</button>
+  <button class="games" data-sort="" onclick="bbs();">Basketball Stars</button>
   <button class="games" data-sort="" onclick="twentyfortyeight();">2048</button>
   <button class="games" data-sort="" onclick="stabfish();">Stabfish.io</button>
   <button class="games" data-sort="" onclick="cookieclicker();">Cookie Clicker</button>
@@ -46,7 +85,7 @@
   <h4 class="credits">credit to 3kh0 for some (a lot) of the games</h4>
 </a>
 <style>
-  #searchbar{
+  #searchbar {
     position: absolute;
     width: 40%;
     left: 30%;
@@ -58,61 +97,71 @@
     border: 2px solid #FFFFFF;
     color: #FFFFFF;
   }
-  .credits{
+
+  .credits {
     position: absolute;
-    bottom:0px;
-    right:5px;
-    color:#FFFFFF;
+    bottom: 0px;
+    right: 5px;
+    color: #FFFFFF;
   }
-  .bg{
+
+  .bg {
     top: 0%;
     left: 0%;
     position: absolute;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
   }
-  .buttons{
+
+  .buttons {
     position: absolute;
-    overflow-y:scroll;
+    overflow-y: scroll;
     width: 60%;
     left: 20%;
     height: 40%;
     top: 50%;
   }
-  ::placeholder{
-    color:white;
+
+  ::placeholder {
+    color: white;
   }
-  .title1{
+
+  .title1 {
     position: absolute;
     width: 100%;
     height: 100px;
-    top:7%;
+    top: 7%;
     float: center;
     align: center;
     text-align: center;
     color: #FFFFFF;
   }
-  .games{
-    font-size: 20px;text-align:center;border:5px solid white;
+
+  .games {
+    font-size: 20px;
+    text-align: center;
+    border: 5px solid white;
     border-radius: 25px;
     background-color: transparent;
     color: #FFFFFF;
-    width:155px;
-    height:100px;
-    vertical-align:top;
-    margin:6px;
+    width: 155px;
+    height: 100px;
+    vertical-align: top;
+    margin: 6px;
     transition: width .5s, height .5s;
   }
-  .games:hover{
+
+  .games:hover {
     width: 170px;
     height: 115px;
   }
-  .back{
+
+  .back {
     position: absolute;
     width: 50px;
     height: 50px;
-    top:1%;
-    left:1%;
+    top: 1%;
+    left: 1%;
   }
 </style>
 <script src="/uv/uv.bundle.js" defer></script>
@@ -121,13 +170,13 @@
 <script src="/search.js" defer></script>
 <script src="/error.js" defer></script>
 
-<script> 
-  
-  jQuery(document).ready(function($){
-    $('.buttons [data-sort]').sort(function(a, b) {  
-      $(a).data("sort",$(a).text());
-      $(b).data("sort",$(b).text());
-      
+<script>
+
+  jQuery(document).ready(function ($) {
+    $('.buttons [data-sort]').sort(function (a, b) {
+      $(a).data("sort", $(a).text());
+      $(b).data("sort", $(b).text());
+
       if ($(a).data("sort") < $(b).data("sort")) {
         return -1;
       } else {
@@ -135,169 +184,169 @@
       }
     }).appendTo('.buttons');
   });
-  
-  var fontsize2=2560/screen.width*7.5;
-  searchbar.style.fontSize = fontsize2+"px";
 
-  
-  function searchfunct(){
-    for (var i=0;i<document.getElementsByClassName("games").length;i++){
-      if (document.getElementsByClassName("games")[i].innerText.toLowerCase().includes(document.getElementById("searchbar").value.toLowerCase())){
-        document.getElementsByClassName("games")[i].style.display="inline-block";
+  var fontsize2 = 2560 / screen.width * 7.5;
+  searchbar.style.fontSize = fontsize2 + "px";
+
+
+  function searchfunct() {
+    for (var i = 0; i < document.getElementsByClassName("games").length; i++) {
+      if (document.getElementsByClassName("games")[i].innerText.toLowerCase().includes(document.getElementById("searchbar").value.toLowerCase())) {
+        document.getElementsByClassName("games")[i].style.display = "inline-block";
       }
-      else{
-        document.getElementsByClassName("games")[i].style.display="none";
+      else {
+        document.getElementsByClassName("games")[i].style.display = "none";
       }
     }
   }
-    
-  setInterval(searchfunct,5);
-  
-  function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); } 
-  
-  var title2=get_cookie("title2");
-  var favicon=get_cookie("favicon");
-  
-  if (favicon==null || favicon==undefined || favicon==""){
-        favicon="/img/logo.png";
-        document.cookie="favicon="+favicon+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
-        (function() {
-           var link=document.querySelector("link[rel*='icon']") || document.createElement('link');
-           link.type='image/x-icon';
-           link.rel='shortcut icon';
-           link.href=favicon;
-           document.getElementsByTagName('head')[0].appendChild(link);
-       })();
-    }
-    else{
-        (function() {
-           var link=document.querySelector("link[rel*='icon']") || document.createElement('link');
-           link.type='image/x-icon';
-           link.rel='shortcut icon';
-           link.href=favicon;
-           document.getElementsByTagName('head')[0].appendChild(link);
-       })();
-    }
-    if (title2==null || title2==undefined || title2==""){
-        title2="DM Unbl0cker";
-        document.cookie="title2="+title2+"; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
-        document.title=title2;
-    }
-    else{
-        document.title=title2;
-    }
+
+  setInterval(searchfunct, 5);
+
+  function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); }
+
+  var title2 = get_cookie("title2");
+  var favicon = get_cookie("favicon");
+
+  if (favicon == null || favicon == undefined || favicon == "") {
+    favicon = "/img/logo.png";
+    document.cookie = "favicon=" + favicon + "; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
+    (function () {
+      var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+      link.type = 'image/x-icon';
+      link.rel = 'shortcut icon';
+      link.href = favicon;
+      document.getElementsByTagName('head')[0].appendChild(link);
+    })();
+  }
+  else {
+    (function () {
+      var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+      link.type = 'image/x-icon';
+      link.rel = 'shortcut icon';
+      link.href = favicon;
+      document.getElementsByTagName('head')[0].appendChild(link);
+    })();
+  }
+  if (title2 == null || title2 == undefined || title2 == "") {
+    title2 = "Gizmo";
+    document.cookie = "title2=" + title2 + "; expires=Thu, 18 Dec 9013 12:00:00 UTC; path=/";
+    document.title = title2;
+  }
+  else {
+    document.title = title2;
+  }
 </script>
 <script>
-  var fontsize1=2560/screen.width*18.5;
-  title1.style.fontSize = fontsize1+"px";
+  var fontsize1 = 2560 / screen.width * 18.5;
+  title1.style.fontSize = fontsize1 + "px";
 </script>
-<script>  
-  function reroutetohome(){
-    window.location.href=window.location.origin;
+<script>
+  function reroutetohome() {
+    window.location.href = window.location.origin;
   }
-  function paperio(){
-    window.location.href=window.location.origin+"/games/gfiles/paperio.html";
+  function paperio() {
+    window.location.href = window.location.origin + "/games/gfiles/paperio.html";
   }
-  function rooftopsnipers(){
-    window.location.href=window.location.origin+"/games/gfiles/rooftopsnipers.html";
+  function rooftopsnipers() {
+    window.location.href = window.location.origin + "/games/gfiles/rooftopsnipers.html";
   }
-  function rl(){
-    window.location.href=window.location.origin+"/games/gfiles/Rocket-League/index.html";
+  function rl() {
+    window.location.href = window.location.origin + "/games/gfiles/Rocket-League/index.html";
   }
-  function amongus(){
-    window.location.href=window.location.origin+"/games/gfiles/@m0ngus.html";
+  function amongus() {
+    window.location.href = window.location.origin + "/games/gfiles/@m0ngus.html";
   }
-  function vex6(){
-    window.location.href=window.location.origin+"/games/gfiles/vex6.html";
+  function vex6() {
+    window.location.href = window.location.origin + "/games/gfiles/vex6.html";
   }
-  function stickrpg(){
-    window.location.href=window.location.origin+"/games/gfiles/stickrpg.html";
+  function stickrpg() {
+    window.location.href = window.location.origin + "/games/gfiles/stickrpg.html";
   }
-  function twentyfortyeight(){
-    window.location.href=window.location.origin+"/games/gfiles/2048.html";
+  function twentyfortyeight() {
+    window.location.href = window.location.origin + "/games/gfiles/2048.html";
   }
-  function cookieclicker(){
-    window.location.href=window.location.origin+"/games/gfiles/cookieclicker.html";
+  function cookieclicker() {
+    window.location.href = window.location.origin + "/games/gfiles/cookieclicker.html";
   }
-  function bitlife(){
-    window.location.href=window.location.origin+"/games/gfiles/bitlife";
+  function bitlife() {
+    window.location.href = window.location.origin + "/games/gfiles/bitlife";
   }
-  function far(){
-    window.location.href=window.location.origin+"/games/gfiles/f0rw@rd@ss@ultremix.html";
+  function far() {
+    window.location.href = window.location.origin + "/games/gfiles/f0rw@rd@ss@ultremix.html";
   }
-  function subwaysurfers(){
-    window.location.href=window.location.origin+"/games/gfiles/subwaysurfers.html";
+  function subwaysurfers() {
+    window.location.href = window.location.origin + "/games/gfiles/subwaysurfers.html";
   }
-  function learntofly(){
-    window.location.href=window.location.origin+"/games/gfiles/le@rnt0fly.html";
+  function learntofly() {
+    window.location.href = window.location.origin + "/games/gfiles/le@rnt0fly.html";
   }
-  function chromedino(){
-    window.location.href=window.location.origin+"/games/gfiles/chromedino.html";
+  function chromedino() {
+    window.location.href = window.location.origin + "/games/gfiles/chromedino.html";
   }
-  function run3(){
-    window.location.href=window.location.origin+"/games/gfiles/run3.html";
+  function run3() {
+    window.location.href = window.location.origin + "/games/gfiles/run3.html";
   }
-  function retrobowl(){
-    window.location.href=window.location.origin+"/games/gfiles/retr0b0wl.html";
+  function retrobowl() {
+    window.location.href = window.location.origin + "/games/gfiles/retr0b0wl.html";
   }
-  function zr(){
-    window.location.href=window.location.origin+"/games/gfiles/z0mbsr0y@le.html";
+  function zr() {
+    window.location.href = window.location.origin + "/games/gfiles/z0mbsr0y@le.html";
   }
-  function raze(){
-    window.location.href=window.location.origin+"/games/gfiles/raze.html";
+  function raze() {
+    window.location.href = window.location.origin + "/games/gfiles/raze.html";
   }
-  function slitherio(){
-    window.location.href=window.location.origin+"/games/gfiles/slitherio.html";
+  function slitherio() {
+    window.location.href = window.location.origin + "/games/gfiles/slitherio.html";
   }
-  function basketbros(){
-    window.location.href=window.location.origin+"/games/gfiles/basketbros.html";
+  function basketbros() {
+    window.location.href = window.location.origin + "/games/gfiles/basketbros.html";
   }
-  function stabfish(){
-    window.location.href=window.location.origin+"/games/gfiles/st@bfish.html";
+  function stabfish() {
+    window.location.href = window.location.origin + "/games/gfiles/st@bfish.html";
   }
-  function motox3m(){
-    window.location.href=window.location.origin+"/games/gfiles/motox3m.html";
+  function motox3m() {
+    window.location.href = window.location.origin + "/games/gfiles/motox3m.html";
   }
-  function lol(){
-    window.location.href=window.location.origin+"/games/gfiles/1v1lol.html";
+  function lol() {
+    window.location.href = window.location.origin + "/games/gfiles/1v1lol.html";
   }
-  function bbs(){
-    window.location.href=window.location.origin+"/games/gfiles/b@sketb@llst@rs.html";
+  function bbs() {
+    window.location.href = window.location.origin + "/games/gfiles/b@sketb@llst@rs.html";
   }
-  function ltf2(){
-    window.location.href=window.location.origin+"/games/gfiles/le@rnt0fly2.html";
+  function ltf2() {
+    window.location.href = window.location.origin + "/games/gfiles/le@rnt0fly2.html";
   }
-  function slope(){
-    window.location.href=window.location.origin+"/games/gfiles/slope.html";
+  function slope() {
+    window.location.href = window.location.origin + "/games/gfiles/slope.html";
   }
-  function eglr(){
-    window.location.href=window.location.origin+"/games/gfiles/minecraft-15";
+  function eglr() {
+    window.location.href = window.location.origin + "/games/gfiles/minecraft-15";
   }
-  function bp(){
-    window.location.href=window.location.origin+"/games/gfiles/bl0ckp0st.html";
+  function bp() {
+    window.location.href = window.location.origin + "/games/gfiles/bl0ckp0st.html";
   }
-  function rooftopsnipers2(){
-    window.location.href=window.location.origin+"/games/gfiles/rooftopsnipers2.html";
+  function rooftopsnipers2() {
+    window.location.href = window.location.origin + "/games/gfiles/rooftopsnipers2.html";
   }
-  function mcars(){
-    window.location.href=window.location.origin+"/games/gfiles/mcars.html";
+  function mcars() {
+    window.location.href = window.location.origin + "/games/gfiles/mcars.html";
   }
-  function vex5(){
-    window.location.href=window.location.origin+"/games/gfiles/vex5.html";
+  function vex5() {
+    window.location.href = window.location.origin + "/games/gfiles/vex5.html";
   }
-  function dragonjoust(){
-    window.location.href=window.location.origin+"/games/gfiles/dr@g0nj0ust.html";
+  function dragonjoust() {
+    window.location.href = window.location.origin + "/games/gfiles/dr@g0nj0ust.html";
   }
-  function ss(){
-    window.location.href=window.location.origin+"/games/gfiles/she11sh0ckers.html";
+  function ss() {
+    window.location.href = window.location.origin + "/games/gfiles/she11sh0ckers.html";
   }
-  function helixjump(){
-    window.location.href=window.location.origin+"/games/gfiles/helixjump.html";
+  function helixjump() {
+    window.location.href = window.location.origin + "/games/gfiles/helixjump.html";
   }
-  function ltf3(){
-    window.location.href=window.location.origin+"/games/gfiles/le@rnt0fly3.html";
+  function ltf3() {
+    window.location.href = window.location.origin + "/games/gfiles/le@rnt0fly3.html";
   }
-  function yohoho(){
-    window.location.href=window.location.origin+"/games/gfiles/y0h0h0.html";
+  function yohoho() {
+    window.location.href = window.location.origin + "/games/gfiles/y0h0h0.html";
   }
 </script>
